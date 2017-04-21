@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha test/**.js",
-    "lint": "eslint *.js"
+    "lint": "eslint *.js",
+    "nsp": "nsp check"
   },
   "author": "Jakub Janczak <kubek2k@gmail.com> (http://github.com/kubek2k)",
   "license": "MIT",
