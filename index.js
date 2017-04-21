@@ -9,4 +9,5 @@ module.exports = function(envMap, prefix, keyMappingFn = (k) => k.toLowerCase(),
             acc[pair[0]] = pair[1];
             return acc;
         }, {});
-}
+};
+
