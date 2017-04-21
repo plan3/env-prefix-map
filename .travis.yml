@@ -1,3 +1,18 @@
 language: node_js
 node_js:
-- '6'
+- 6
+- 5
+- 4
+install:
+- npm install
+script:
+- npm run lint
+- npm run nsp
+deploy:
+  provider: npm
+  email: billing.relate@schibsted.media
+  on:
+    branch: master
+    node: '6'
+  api_key:
+    secure: YsXig1aqk450bTCaR4Hc6FI88Y3rXGhimRYMoVj1lUIGNCHO8FJJT1IFmEj4Kqaj9wvD+Sh+X939QIi84/aiDaSKPoCdjlnP9Fwq2YUCghSZlGYRINwpD1Pg/LbqJ5qxiJQGkPJ1MNt6X8ezgdHSc67ciFO7BUXmUHHPj5Luz59vXLoR7gq4/LCdvSc0jBooqxt0b6Cl3GYWOua+ccPjTNOK6ASxpulp6HmkFYQTzDzp0bU/OyQpXyKbDpORm2gA1f9ndK7gXQUYIfYvgnSPvZXnKdGlYTIKr0TcJiMPjThghCsGnF3B+VEMoSwynaGOB2xFsTJzPD6L8yJN/ZUNZN2dBOWQ9EiSlHg4UZTmjJEXT7nobyrAkvCe0yJDFKdSi+h792nAfma2b46Q1EB2/lGRF+csWnRGgO48XPeKEu+cblBjUwXU80Uu7ORyLxgx83ec0CK52GtM6IhCX4+mVi3M3ELkUhRZW1qvB+n+hcobpPKL2AoOp9qgjC278mRGf/vxfpJfwuVkQi+wwY0JHpkLBYi5s69DH5PMMqkMlPnLY96VNdkfODgxU8UV3WbOuwx706NEG4XDayBeM5mQyffBeXH5TtowrwHrSSXkz1jz4jwSdLV3UxRZW+1wNKoq2qz6eUEIJDu/gRKaomYhjmYGCZcb9+sVJccXAP3kKUQ=
