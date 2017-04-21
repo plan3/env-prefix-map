@@ -4,11 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/**.js"
+    "test": "mocha test/**.js",
+    "lint": "eslint *.js"
   },
   "author": "Jakub Janczak <kubek2k@gmail.com> (http://github.com/kubek2k)",
   "license": "MIT",
   "devDependencies": {
+    "eslint": "3.7.1",
+    "eslint-config-vgno": "7.0.0",
+    "eslint-plugin-promise": "3.5.0",
     "chai": "3.5.0",
     "mocha": "3.2.0"
   }
