@@ -18,7 +18,7 @@ SOME_VARIABLE='x'
 the call
 
 ```
-require('env-prefix-map')(process.env, 'PLAYS');
+require('env-prefix-map')(process.env, 'PLAYS_');
 ```
 
 would produce a map of following form:
@@ -37,7 +37,7 @@ would produce a map of following form:
 One can differentiate the way key is being tranformed (`toLowerCase` by default):
 
 ```
-require('env-prefix-map')(process.env, 'PLAYS', k => 'plays ' + k);
+require('env-prefix-map')(process.env, 'PLAYS_', {keyFn: k => 'plays ' + k});
 ```
 
 will produce:
@@ -55,7 +55,7 @@ will produce:
 You can also transform values:
 
 ```
-require('env-prefix-map')(process.env, 'PLAYS', k => k.toLowerCase(), v => v.toUpperCase());
+require('env-prefix-map')(process.env, 'PLAYS_', {valueFn: v => v.toUpperCase()});
 ```
 
 will produce:
